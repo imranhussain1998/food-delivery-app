@@ -1,0 +1,122 @@
+.myorders {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.myorders h2 {
+  margin-bottom: 20px;
+}
+
+.order-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.order-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  flex-wrap: wrap; /* ✅ makes it stack on smaller screens */
+}
+
+.order-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.order-img {
+  width: 40px;
+  height: 40px;
+}
+
+.order-items {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.order-meta {
+  font-size: 14px;
+  color: #555;
+}
+
+.order-center {
+  text-align: right;
+  margin-right: 20px;
+  min-width: 120px;
+}
+
+.order-amount {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.order-status {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.order-status.food-processing {
+  color: #d17b00;
+}
+
+.order-status.confirmed {
+  color: #2e7d32;
+}
+
+.order-status.cancelled {
+  color: #c62828;
+}
+
+.order-right {
+  display: flex;
+  align-items: center;
+}
+
+.track-btn {
+  border: 1px solid #f06292;
+  background: #fff0f4;
+  color: #c2185b;
+  padding: 6px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.track-btn:hover {
+  background: #f8d7e1;
+}
+
+/* ✅ Responsive adjustments */
+@media (max-width: 768px) {
+  .order-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .order-center {
+    text-align: left;
+    margin-right: 0;
+  }
+
+  .order-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .track-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
